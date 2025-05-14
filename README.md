@@ -1,61 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+	<img alt="logo" src="http://image.jmsite.cn/logo-jm.png">
+</p>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">JmsAdmin v1.0.1</h1>
+<h4 align="center">基于Laravel+Vue3前后端分离的PHP快速开发框架</h4>
+<p align="center">
+	<img src="https://img.shields.io/badge/JmsAdmin-v1.0.1-brightgreen.svg">
+	<img src="https://img.shields.io/github/license/mashape/apistatus.svg">
 </p>
 
-## About Laravel
+## 平台简介
+* 本后台基于优秀的若依后台管理框架，前端完全使用若依代码，只做了适当的修改和优化，后端代码使用php的Laravel框架开发。
+* 本仓库为后端仓库，配套前端代码仓库地址:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  github:https://github.com/jmideal/jmsadmin-vue3
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  gitee:https://gitee.com/jmideal/jmsadmin-vue3
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 后端运行
 
-## Learning Laravel
+### 克隆源码
+```bash
+git clone https://github.com/jmideal/laravel-jmsadmin-code.git
+```
+或
+```bash
+git clone https://gitee.com/jmideal/laravel-jmsadmin-code.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 安装依赖
+进入laravel-jmsadmin-code目录后执行
+```bash
+composer install
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 配置env文件
+#### 基于示例文件创建env
+```bash
+sudo cp .env.example .env
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 内置功能
 
-## Laravel Sponsors
+1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
+2.  部门管理：配置系统组织机构（公司、部门、小组），树结构展现支持数据权限。
+3.  岗位管理：配置系统用户所属担任职务。
+4.  菜单管理：配置系统菜单，操作权限，按钮权限标识等。
+5.  角色管理：角色菜单权限分配、角色数据权限分配。
+6.  字典管理：对系统中经常使用的一些较为固定的数据进行维护。
+7.  参数管理：对系统动态配置常用参数。
+8.  通知公告：系统通知公告信息发布维护。
+9.  操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
+10. 登录日志：系统登录日志记录查询包含登录异常。
+11. 在线用户：当前系统中活跃用户状态监控。
+12. 缓存列表：对系统运行中的缓存进行查看和管理。
+13. 代码生成：前后端代码的生成（vue，js，validate，controller，service，model），开发中。
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 在线体验
 
-### Premium Partners
+- 用户名/密码：admin/admin123
+- 演示地址：http://laravel.jmsadmin.jmsite.cn
+- 文档地址：http://doc.jmsadmin.jmsite.cn
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+## 演示图
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<table>
+    <tr>
+        <td><img src="http://image.jmsite.cn/demo/1.png"/></td>
+        <td><img src="http://image.jmsite.cn/demo/2.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="http://image.jmsite.cn/demo/3.png"/></td>
+        <td><img src="http://image.jmsite.cn/demo/4.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="http://image.jmsite.cn/demo/5.png"/></td>
+        <td><img src="http://image.jmsite.cn/demo/6.png"/></td>
+    </tr>
+	<tr>
+        <td><img src="http://image.jmsite.cn/demo/7.png"/></td>
+        <td><img src="http://image.jmsite.cn/demo/8.png"/></td>
+    </tr>	 
+    <tr>
+        <td><img src="http://image.jmsite.cn/demo/9.png"/></td>
+        <td><img src="http://image.jmsite.cn/demo/10.png"/></td>
+    </tr>
+	<tr>
+        <td><img src="http://image.jmsite.cn/demo/11.png"/></td>
+        <td><img src="http://image.jmsite.cn/demo/12.png"/></td>
+    </tr>
+	<tr>
+        <td><img src="http://image.jmsite.cn/demo/13.png"/></td>
+        <td><img src="http://image.jmsite.cn/demo/14.png"/></td>
+    </tr>
+</table>

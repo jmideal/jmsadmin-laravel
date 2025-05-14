@@ -280,10 +280,10 @@ function getTableInfo($table)
 
 function getValidateClassByServiceClass($serviceClass)
 {
-    $namespacePrefix = 'plugin\\jmsadmin\\app\\';
-    $serviceNamespacePrefix = $namespacePrefix . 'service';
+    $namespacePrefix = 'App\\';
+    $serviceNamespacePrefix = $namespacePrefix . 'Services';
     $serviceClassSuffix = 'Service';
-    $validateNamespacePrefix = $namespacePrefix . 'validate';
+    $validateNamespacePrefix = $namespacePrefix . 'Http\\Validates';
     $validateClassSuffix = 'Validate';
 
     $tmp = explode('\\', $serviceClass);
