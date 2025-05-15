@@ -5,9 +5,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::controller(\App\Http\Controllers\AuthController::class)->middleware(['auth'])->group(function () {
+Route::controller(\App\Http\Controllers\AuthController::class)->middleware(['throttle:login'])->group(function () {
     Route::get('auth/captchaImage', 'captchaImage');
     Route::post('auth/login', 'login');
+});
+
+Route::controller(\App\Http\Controllers\AuthController::class)->middleware(['auth'])->group(function () {
     Route::post('auth/logout', 'logout');
     Route::get('auth/getInfo', 'getInfo');
     Route::get('auth/getRouters', 'getRouters');

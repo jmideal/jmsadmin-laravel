@@ -2,7 +2,12 @@
 
 namespace App\Providers;
 
+use App\Exceptions\ApiException;
+use App\Utils\ApiResult;
 use Closure;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,6 +27,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        RateLimiter::for('login', function (Request $request) {
+            $adminInfo = adminInfo();
+            return Limit::perMinute(20)->by($adminInfo['user_id'] ?? $request->ip())->response(function (Request $request, array $headers) {
+                throw new ApiException('请求频率超限，请休息一会');
+            });
+        });
         //mobile
         Validator::extend('mobile', function ($attribute, $value, $parameters, $validator) {
             return preg_match('/^1[3-9]\d{9}$/', $value) === 1;

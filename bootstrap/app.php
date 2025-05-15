@@ -21,6 +21,9 @@ return Application::configure(basePath: dirname(__DIR__))
             '127.0.0.1',
             '10.0.0.0/8'
         ]);
+        //
+        $middleware->throttleWithRedis();
+        //
         $middleware->trustProxies(headers: Request::HEADER_X_FORWARDED_FOR |
             Request::HEADER_X_FORWARDED_HOST |
             Request::HEADER_X_FORWARDED_PORT |
