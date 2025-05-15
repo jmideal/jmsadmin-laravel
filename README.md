@@ -20,11 +20,11 @@
 
 ### 克隆源码
 ```bash
-git clone https://github.com/jmideal/laravel-jmsadmin-code.git
+git clone https://github.com/jmideal/jmsadmin-laravel.git
 ```
 或
 ```bash
-git clone https://gitee.com/jmideal/laravel-jmsadmin-code.git
+git clone https://gitee.com/jmideal/jmsadmin-laravel.git
 ```
 
 ### 安装依赖
